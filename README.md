@@ -4,7 +4,7 @@ This repository was made to meet the final project requirements of course Advanc
 Shuchismita Biswas, Sarthak Gupta, Sanij Gyawali, Sagar Karki
 
 # Classification of Time-Series Images Using Deep Convolutional Neural Networks
-The term time-series is used to refer to a sequence of data with temporal correlation. Such series are omnipresent in the world - the stock prices, videos, music, etc. This has motivated efforts and research into time-series classification (TSC) tasks that assign a label <img src="https://latex.codecogs.com/svg.latex?\Large&space;y_n}"/> to a time-series <img src="https://latex.codecogs.com/svg.latex?\Large&space;x_n}"/>
+A time-series refers to a sequence of data points, ordered temporally. Time-series analysis finds many real-world applications, in fields like weather forecasting, stock markets, biomedical signal monitoring and industrial instrumentation. This has motivated efforts and research into time-series classification (TSC) tasks that assign a label <img src="https://latex.codecogs.com/svg.latex?\Large&space;y_n}"/> to a time-series <img src="https://latex.codecogs.com/svg.latex?\Large&space;x_n}"/>
 
 Traditionally TSC methods consist of spectral analysis and wavelet analysis (frequency-domain), and, auto-correlation, auto-regression and cross-correlation (time-domain). With the increased computation power and availability of large data sets, Deep Neural Networks (DNNs) have been employed for this purpose more recently. Recurrent Neural Networks is one such specialized DNNs that was developed for TSC and has been used extensively.
 
