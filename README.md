@@ -3,3 +3,4 @@ This repository and project report was made to meet the final project requiremen
 **Team members:** Shuchismita Biswas, Sarthak Gupta, Sanij Gyawali, Sagar Karki
 
 # Classification of Time-Series Images Using Deep Convolutional Neural Networks
+## Introduction
