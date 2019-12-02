@@ -47,19 +47,11 @@ Additionally, CNNs include a Pool layer for downsampling the information and a f
 
 ## Experiments
 
-|   Dataset   | Accuracy reported |          | Accuracy Obtained |          |
+|   Dataset   | Accuracy reported            | Accuracy Obtained            |
 |:-----------:|:-----------------:|:--------:|:-----------------:|:--------:|
 |             |       RP-CNN      | GASF-CNN |       RP-CNN      | GASF-CNN |
 |   ECG 200   |                   |          |                   |          |
 | Fifty words |                   |          |                   |          |
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
 
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-[Prototype table]
 ## Summary
