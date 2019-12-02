@@ -140,10 +140,17 @@ model.fit(x_train, y_train,
 
 The following hyperparameters were used for the CNN classifier on each dataset. 
 
+> Table I: Hyperparameters for the RP-CNN method
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 |:-------:|:-------:|:-------:|:-------:|
-| **ECG200** | | | |
-| **FiftyWords** | | | |
+| ECG200 | | | |
+| FiftyWords | 64 X 64| 90 | 1500 |
+
+> Table II: Hyperparameters for the GASF-CNN method
+| **Dataset** | **Image size** | **Batch size** | **Epochs** |
+|:-------:|:-------:|:-------:|:-------:|
+| ECG200 | | | |
+| FiftyWords | |  |  |
 
 
 <table class="tg">
