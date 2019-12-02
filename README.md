@@ -14,10 +14,8 @@ The idea of imaging time-series entails training machines to *visually* recogniz
 ## Recurrent Plots (RP)
 Time series data are characterized by distinct behavior like periodicity, trends and cyclicities. Dynamic nonlinear systems exhibit recurrence of states which may be visualized through RPs. First introduced in [4], RPs explore the <img src="https://latex.codecogs.com/svg.latex?\Large&space;m}"/>-dimensional phase space trajectory of a system by representing its recurrences in two dimensions. They capture how frequently a system returns to or deviates from its past states. Mathematically, this may be expressed as below.
 
-$$x_n$$
+<img src="https://tex.s2cms.ru/svg/x_%7B1%2C2%7D%20%3D%20%7B-b%5Cpm%5Csqrt%7Bb%5E2%20-%204ac%7D%20%5Cover%202a%7D." alt="R_{i,j}=||\Vec{s_i}-\Vec{s_j}||, \quad i,j=1,2,\dots K}." />
 
-
-<img src="https://latex.codecogs.com/svg.latex?\Large&space; R_{i,j}=||\Vec{s_i}-\Vec{s_j}||, \quad i,j=1,2,\dots K/>
 
 Here, $\Vec{s_i}$ and $\Vec{s_j}$ represent the system states at time instants $i$ and $j$ respectively. $K$ is the number of system states considered. In the original RP method, the $R$ matrix is binary, i.e. its entries are $1$ if the value of $||\Vec{s_i}-\Vec{s_j}||$ is above a pre-determined threshold and $0$ otherwise. We do away with the thresholding since unthresholded RPs capture more information. Images so obtained capture patterns which may not be immediately discernible to the naked eye. A detailed procedure for constructing a RP plot of a simple time series is shown in Fig.~\ref{fig:RP}.
 
