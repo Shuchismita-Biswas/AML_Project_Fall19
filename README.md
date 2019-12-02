@@ -36,9 +36,7 @@ Unlike a regular DNN which use matrix dot products, the information between laye
 <p align="center">
 <img src="neural_net2.jpeg" alt="dnn" width="500" align="middle"/>
 > Fig 3: A fully connected DNN with two hidden layers
-</p>
 
-<p align="center">
 <img src="cnn.jpeg" alt="cnn" width="500" align="middle"/>
 > Fig 3: An example CNN
 </p>
