@@ -9,7 +9,7 @@ A time-series refers to a sequence of data points, ordered temporally. Time-seri
 Recent advances in the field of computer vision have developed efficent DNNs, like **Convolutional Neural Networks (CNN)** for image classification. In recent literature, some papers have proposed image embedding of time series data so as to leverage image classification algorithms for the TSC task. In this project, we reproduce two image embedding methods for time series data- **Recurrent Plots (RP)** [1] and **Gramian Angular Summation Field (GASF)** [2] and use a CNN to classify the generated images. We test the classification algorithm using two datasets from the UCR dataset archive [3] and verify the results reported in [1].
 
 ## Encoding Time-Series into Images
-
+The idea of imaging time-series entails training machines to *visually* recognize, classify and learn temporal structures and patterns. 
 
 ## Convolutional Neural Networks
 CNNs like regular DNNs consist of a input layer, hidden layers and an output layer. Training a CNN also has a similar purpose as a regular DNN - to minimize the loss function measured at the output layer. The main difference between the CNNs and DNNs lies in how this information flows through a CNN.
