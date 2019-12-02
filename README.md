@@ -18,8 +18,8 @@ Unlike a regular DNN which use matrix dot products, the information between laye
 
 A regular DNN [3] :
 <img src="http://cs231n.github.io/assets/nn1/neural_net2.jpeg" width="50%"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 40px;" />
+     alt="DNN"
+     title="Example of a DNN" />
 
 A CNN [3] :
 <img src="http://cs231n.github.io/assets/cnn/cnn.jpeg"
