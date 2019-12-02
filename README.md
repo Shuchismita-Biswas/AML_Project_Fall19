@@ -42,6 +42,7 @@ cos(\phi_1+\phi_1)&amp;\dots &amp;cos(\phi_1+\phi_n)\\
 cos(\phi_n+\phi_1)&amp;\dots &amp;cos(\phi_n+\phi_n)
 \end{pmatrix}," />
 
+Using the trigonometric difference of the angles instead of summation would result in the formation of the *Gramian Angular Difference Field (GADF)*.
 
 ## Convolutional Neural Networks
 CNNs like regular DNNs consist of a input layer, hidden layers and an output layer. Training a CNN also has a similar purpose as a regular DNN - to minimize the loss function measured at the output layer. The main difference between the CNNs and DNNs lies in how this information flows through a CNN.
