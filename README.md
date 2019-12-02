@@ -17,9 +17,9 @@ CNNs like regular DNNs consist of a input layer, hidden layers and an output lay
 Unlike a regular DNN which use matrix dot products, the information between layers in a CNN can be a result of the convolution operation. This is specifically useful for images for which a convolution can be seen as a rolling matrix dot products over smaller portions of the image. Additionally, multiple such moving matrices can be stacked together to add a dimension of depth in addition to width and height.
 
 A regular DNN [3] :
-<img src=(http://cs231n.github.io/assets/nn1/neural_net2.jpeg){ width=50% }
+<img src="http://cs231n.github.io/assets/nn1/neural_net2.jpeg"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px; width: 50%" />
 
 A CNN [3] :
 <img src="http://cs231n.github.io/assets/cnn/cnn.jpeg"
