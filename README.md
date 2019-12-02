@@ -46,6 +46,10 @@ Fig 4: An example CNN
 
 ## Experiments
 
+### Dataset 
+In this project, the efficacy of using deep CNNs in classifying time series images wo datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/) were used to test the performance of CNN-based classifier on  
+
+
 <table class="tg">
   <tr>
     <th class="tg-c3ow">Dataset</th>
