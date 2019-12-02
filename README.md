@@ -9,7 +9,14 @@ A time-series refers to a sequence of data points, ordered temporally. Time-seri
 Recent advances in the field of computer vision have developed efficent DNNs, like **Convolutional Neural Networks (CNN)** for image classification. In recent literature, some papers have proposed image embedding of time series data so as to leverage image classification algorithms for the TSC task. In this project, we reproduce two image embedding methods for time series data- **Recurrent Plots (RP)** [1] and **Gramian Angular Summation Field (GASF)** [2] and use a CNN to classify the generated images. We test the classification algorithm using two datasets from the UCR dataset archive [3] and verify the results reported in [1].
 
 ## Encoding Time-Series into Images
-The idea of imaging time-series entails training machines to *visually* recognize, classify and learn temporal structures and patterns. 
+The idea of imaging time-series entails training machines to *visually* recognize, classify and learn temporal structures and patterns. Here, we describe two methods that this project has explored. 
+
+## Recurrent Plots (RP)
+Time series data are characterized by distinct behavior like periodicity, trends and cyclicities. Dynamic nonlinear systems exhibit recurrence of states which may be visualized through RPs. First introduced in [4], RPs explore the <img src="https://latex.codecogs.com/svg.latex?\Large&space;m}"/>-dimensional phase space trajectory of a system by representing its recurrences in two dimensions. They capture how frequently a system returns to or deviates from its past states. Mathematically, this may be expressed as below.
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space; R_{i,j}=||\Vec{s_i}-\Vec{s_j}||, \quad i,j=1,2,\dots K}"/>
+
+Here, $\Vec{s_i}$ and $\Vec{s_j}$ represent the system states at time instants $i$ and $j$ respectively. $K$ is the number of system states considered. In the original RP method, the $R$ matrix is binary, i.e. its entries are $1$ if the value of $||\Vec{s_i}-\Vec{s_j}||$ is above a pre-determined threshold and $0$ otherwise. We do away with the thresholding since unthresholded RPs capture more information. Images so obtained capture patterns which may not be immediately discernible to the naked eye. A detailed procedure for constructing a RP plot of a simple time series is shown in Fig.~\ref{fig:RP}.
 
 ## Convolutional Neural Networks
 CNNs like regular DNNs consist of a input layer, hidden layers and an output layer. Training a CNN also has a similar purpose as a regular DNN - to minimize the loss function measured at the output layer. The main difference between the CNNs and DNNs lies in how this information flows through a CNN.
