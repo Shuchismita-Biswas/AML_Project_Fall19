@@ -19,7 +19,7 @@ Unlike a regular DNN which use matrix dot products, the information between laye
 A regular DNN [3] :
 <img src="http://cs231n.github.io/assets/nn1/neural_net2.jpeg"
      alt="Markdown Monster icon"
-     style="float: left; margin-right: 20px; width: 50px; height: 50px" />
+     style="float: left; margin-right: 20px; width: 5px; height: 5px" />
 
 A CNN [3] :
 <img src="http://cs231n.github.io/assets/cnn/cnn.jpeg"
