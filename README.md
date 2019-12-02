@@ -15,9 +15,9 @@ The idea of imaging time-series entails training machines to *visually* recogniz
 Time series data are characterized by distinct behavior like periodicity, trends and cyclicities. Dynamic nonlinear systems exhibit recurrence of states which may be visualized through RPs. First introduced in [4], RPs explore the <img src="https://latex.codecogs.com/svg.latex?\Large&space;m}"/>-dimensional phase space trajectory of a system by representing its recurrences in two dimensions. They capture how frequently a system returns to or deviates from its past states. Mathematically, this may be expressed as below.
 
 ```math
-display
+x_n
 ```
-"x"
+
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space; R_{i,j}=||\Vec{s_i}-\Vec{s_j}||, \quad i,j=1,2,\dots K}"/>
 
