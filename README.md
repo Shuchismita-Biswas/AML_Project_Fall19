@@ -65,7 +65,11 @@ Fig 4: An example CNN classifier
 ## Experiments
 
 ### Dataset 
-In this project, the efficacy of using deep CNNs in classifying time series images is demonstrated on two datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/): **ECG200** and **Fifty words**.
+In this project, the efficacy of using deep CNNs in classifying time series images is demonstrated on two datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/): **ECG200** and **FiftyWords**. 
+
+-*ECG200*: In this dataset, each series traces the electrical activity recorded during one heartbeat. The two classes are a normal heartbeat and a Myocardial Infarction.
+-*FiftyWords*: This dataset consists of word outlines taken from the George Washington library. Each case is a word. A series is formed by taking the height profile of the word.
+
 <table class="tg">
   <tr>
     <th class="tg-7btt">Dataset</th>
@@ -75,14 +79,14 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
     <th class="tg-7btt">No. of test data</th>
   </tr>
   <tr>
-    <td class="tg-7btt">ECG 200</td>
+    <td class="tg-7btt">ECG200</td>
     <td class="tg-c3ow">2</td>
     <td class="tg-c3ow">96</td>
     <td class="tg-c3ow">100</td>
     <td class="tg-c3ow">100</td>
   </tr>
   <tr>
-    <td class="tg-7btt">Fifty words</td>
+    <td class="tg-7btt">FiftyWords</td>
     <td class="tg-c3ow">50</td>
     <td class="tg-c3ow">270</td>
     <td class="tg-c3ow">450</td>
