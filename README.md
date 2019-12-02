@@ -24,14 +24,22 @@ Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and
 ![RP](RP.PNG)
 > Fig. 2: Procedure for constructing unthresholded RP images from time-series data, reproduced from [1,5]. On the left panel, we show a simple univariate time series <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/> with 12 samples. The middle panel shows its two dimensional phase space trajectory with <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i:(f(i),f(i+1))}"/>. The right panel shows the unthresholded RP for <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/>. It is a <img src="https://latex.codecogs.com/svg.latex?\Large&space;11\times11}"/> matrix, whose <img src="https://latex.codecogs.com/svg.latex?\Large&space;(i,j)}"/>-th entry is the euclidean distance between <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_j}"/> in the phase space.
 
-### Gramian Angular Summation Field (GASF)
+### Gramian Angular Field (GAF)
 In this image embedding technique, the time series is first transformed into the polar coordinates, where the radius represents the time stamps, and cosine of the angle represents the amplitude values in the data rescaled in the interval [-1,1] or [0,1] using the following equation:
 <img src="http://latex.codecogs.com/gif.latex? x' = (x_i-x_{max})+(x_i-x_{min})/(x_{max}-x_{min})" border="0"/>.
 
 This produces angular values in the range [0, π], which is later used in calculating information granularity in the GAF. Next, the cosine angle <img src="https://tex.s2cms.ru/svg/%5Cphi" alt="\phi" /> is calculated using the time stamp, <img src="https://latex.codecogs.com/svg.latex?\Large&space;t}"/>, as:
+
 <img src="https://tex.s2cms.ru/svg/%5Cphi%3Dcos%5E%7B-1%7D(x'_i)%2C%20%5Cquad%20-1%5Cleq%20x'_i%20%5Cleq%201%20" alt="\phi=cos^{-1}(x'_i), \quad -1\leq x'_i \leq 1 " />. 
 
-Radius,<img src="https://latex.codecogs.com/svg.latex?\Large&space;r}"/>, is given by <img src="https://tex.s2cms.ru/svg/%20r%3D%5Cfrac%7Bt_i%7D%7BN%7D" alt=" r=\frac{t_i}{N}" />, where 
+Radius <img src="https://latex.codecogs.com/svg.latex?\Large&space;r}"/>  is given by <img src="https://tex.s2cms.ru/svg/%20r%3D%5Cfrac%7Bt_i%7D%7BN%7D" alt=" r=\frac{t_i}{N}" />, where <img src="https://latex.codecogs.com/svg.latex?\Large&space;N}"/> is a constant used as regularization factor for the polar space span. As the time stamp increases, the polar coordinate mapping represents the change in relative calculated angle resulting in a different perspective of the time series behavior. This is illustrated in the fig. 5. GAF provides two major advantages-: (a) a one-to-one mapping of the time series to the polar coordinates, and (b) preservation of absolute temporal correlations. Once the time series data is mapped into the polar coordinate system, the Gramian matrix can be contstructed. 
+
+*Gramian Angular Summation Field (GASF)* is formed using the trigonometric summation of the angle given by inverse cosine in the rescaled time series signal as follows:
+<img src="https://tex.s2cms.ru/svg/GASF%3D%5Cbegin%7Bpmatrix%7D%0Acos(%5Cphi_1%2B%5Cphi_1)%26%5Cdots%20%26cos(%5Cphi_1%2B%5Cphi_n)%5C%5C%0A%5Cdots%20%26%20%5Cdots%20%26%20%5Cdots%5C%5C%0Acos(%5Cphi_n%2B%5Cphi_1)%26%5Cdots%20%26cos(%5Cphi_n%2B%5Cphi_n)%0A%5Cend%7Bpmatrix%7D%2C" alt="GASF=\begin{pmatrix}
+cos(\phi_1+\phi_1)&amp;\dots &amp;cos(\phi_1+\phi_n)\\
+\dots &amp; \dots &amp; \dots\\
+cos(\phi_n+\phi_1)&amp;\dots &amp;cos(\phi_n+\phi_n)
+\end{pmatrix}," />
 
 
 ## Convolutional Neural Networks
