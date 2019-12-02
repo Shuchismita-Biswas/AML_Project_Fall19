@@ -22,7 +22,7 @@ Time series data are characterized by distinct behavior like periodicity, trends
 Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_j%7D" alt="\Vec{s_j}" /> represent the system states at time instants <img src="https://latex.codecogs.com/svg.latex?\Large&space;i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;j}"/> respectively. <img src="https://latex.codecogs.com/svg.latex?\Large&space;K}"/> is the number of system states considered. In the original RP method, the <img src="https://latex.codecogs.com/svg.latex?\Large&space;R}"/> matrix is binary, i.e. its entries are <img src="https://latex.codecogs.com/svg.latex?\Large&space;1}"/> if the value of <img src="https://tex.s2cms.ru/svg/%7C%7C%5CVec%7Bs_i%7D-%5CVec%7Bs_j%7D%7C%7C" alt="||\Vec{s_i}-\Vec{s_j}||" /> is above a pre-determined threshold and 0 otherwise. We do away with the thresholding since unthresholded RPs capture more information. Images so obtained capture patterns which may not be immediately discernible to the naked eye. A detailed procedure for constructing a RP plot of a simple time series is shown in Fig. 2.
 
 ![RP](RP.PNG)
-> Fig. 2: Procedure for constructing unthresholded RP images from time-series data, reproduced from [1]. On the left panel, we show a simple univariate time series <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/> with 12 samples. The middle panel shows its two dimensional phase space trajectory with <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i:(f(i),f(i+1))}"/>. The right panel shows the unthresholded RP for <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/>. It is a <img src="https://latex.codecogs.com/svg.latex?\Large&space;11\times11}"/> matrix, whose <img src="https://latex.codecogs.com/svg.latex?\Large&space;(i,j)}"/>-th entry is the euclidean distance between <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_j}"/> in the phase space.
+> Fig. 2: Procedure for constructing unthresholded RP images from time-series data, reproduced from [1,5]. On the left panel, we show a simple univariate time series <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/> with 12 samples. The middle panel shows its two dimensional phase space trajectory with <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i:(f(i),f(i+1))}"/>. The right panel shows the unthresholded RP for <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/>. It is a <img src="https://latex.codecogs.com/svg.latex?\Large&space;11\times11}"/> matrix, whose <img src="https://latex.codecogs.com/svg.latex?\Large&space;(i,j)}"/>-th entry is the euclidean distance between <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_j}"/> in the phase space.
 
 ### Gramian Angular Summation Field (GASF)
 
@@ -76,3 +76,21 @@ Fig 4: An example CNN
 </table>
 
 ## Summary
+
+## Reference
+[1]  N. Hatami, Y. Gavet, and J. Debayle, “Classification of Time-Series
+Images Using Deep Convolutional Neural Networks,” *ArXiv*, vol.
+abs/1710.00886, 2017.
+
+[2]  Z. Wang and T. Oates, “Imaging Time-series to Improve Classification
+and Imputation,” in *Proceedings of the 24th International Conference
+on Artificial Intelligence*, 2015, pp. 3939–3945.
+
+[3] Y. Chen, E. Keogh, B. Hu, N. Begum, A. Bagnall, A. Mueen and G. Batista, "The UCR time series archive," *ArXiv*, vol. abs/1810.07758v2, 2019.
+
+[4] N. Marwan, M. C. Romano, M. Thiel, and J. Kurths, “Recurrence Plots
+for the Analysis of Complex Systems,” *Physics Reports*, vol. 438, no. 5,
+pp. 237–329, Jan 2007.
+
+[5] S. Biswas, R.  Meyur and V. Centeno, "DeVLearn: A Deep Visual Learning Framework for
+Localizing Temporary Faults in Power Systems", *ArXiv*, vol. abs/1911.03759v1, 2019.
