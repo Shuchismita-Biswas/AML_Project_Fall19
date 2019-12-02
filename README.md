@@ -142,13 +142,13 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 > Table I: Hyperparameters for the RP-CNN method
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
-|:-------:|:-------:|:-------:|:-------:|
+| :-------: | :-------: | :-------: | :-------: |
 | ECG200 | | | |
-| FiftyWords | 64 X 64| 90 | 1500 |
+| FiftyWords | 64 X 64 | 90 | 1500 |
 
 > Table II: Hyperparameters for the GASF-CNN method
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
-|:-------:|:-------:|:-------:|:-------:|
+| :-------: | :-------: | :-------: | :-------:c|
 | ECG200 | | | |
 | FiftyWords | |  |  |
 
