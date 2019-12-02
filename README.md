@@ -66,6 +66,32 @@ Fig 4: An example CNN classifier
 
 ### Dataset 
 In this project, the efficacy of using deep CNNs in classifying time series images is demonstrated on two datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/): **ECG200** and **Fifty words**.
+<table class="tg">
+  <tr>
+    <th class="tg-7btt">Dataset</th>
+    <th class="tg-7btt">No. of classes</th>
+    <th class="tg-7btt">Length</th>
+    <th class="tg-7btt">No. of training data </th>
+    <th class="tg-7btt">No. of test data</th>
+  </tr>
+  <tr>
+    <td class="tg-7btt">ECG 200</td>
+    <td class="tg-c3ow">2</td>
+    <td class="tg-c3ow">96</td>
+    <td class="tg-c3ow">100</td>
+    <td class="tg-c3ow">100</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">Fifty words</td>
+    <td class="tg-c3ow">50</td>
+    <td class="tg-c3ow">270</td>
+    <td class="tg-c3ow">450</td>
+    <td class="tg-c3ow">455</td>
+  </tr>
+</table>
+
+### 
+
 
 <table class="tg">
   <tr>
@@ -98,7 +124,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
 
 ## Summary
 
-## Reference
+## References
 [1]  N. Hatami, Y. Gavet, and J. Debayle, “Classification of Time-Series
 Images Using Deep Convolutional Neural Networks,” *ArXiv*, vol.
 abs/1710.00886, 2017.
