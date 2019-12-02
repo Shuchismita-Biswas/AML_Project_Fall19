@@ -25,7 +25,8 @@ Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and
 > Fig. 2: Procedure for constructing unthresholded RP images from time-series data, reproduced from [1,5]. On the left panel, we show a simple univariate time series <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/> with 12 samples. The middle panel shows its two dimensional phase space trajectory with <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i:(f(i),f(i+1))}"/>. The right panel shows the unthresholded RP for <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/>. It is a <img src="https://latex.codecogs.com/svg.latex?\Large&space;11\times11}"/> matrix, whose <img src="https://latex.codecogs.com/svg.latex?\Large&space;(i,j)}"/>-th entry is the euclidean distance between <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_j}"/> in the phase space.
 
 ### Gramian Angular Summation Field (GASF)
-
+In this image embedding technique, the time series is first transformed into the polar coordinates, where the radius represents the time stamps, and cosine of the angle represents the amplitude values in the data rescaled in the interval [-1,1] or [0,1] using the following equation:
+\sum_{i=1}^{10} t_i
 
 
 ## Convolutional Neural Networks
@@ -47,8 +48,7 @@ Fig 4: An example CNN
 ## Experiments
 
 ### Dataset 
-In this project, the efficacy of using deep CNNs in classifying time series images wo datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/) were used to test the performance of CNN-based classifier on  
-
+In this project, the efficacy of using deep CNNs in classifying time series images is demonstrated on two datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/): **ECG200** and **Fifty words**.
 
 <table class="tg">
   <tr>
