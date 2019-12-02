@@ -35,6 +35,7 @@ This produces angular values in the range [0, π], which is later used in calcul
 Radius <img src="https://latex.codecogs.com/svg.latex?\Large&space;r}"/>  is given by <img src="https://tex.s2cms.ru/svg/%20r%3D%5Cfrac%7Bt_i%7D%7BN%7D" alt=" r=\frac{t_i}{N}" />, where <img src="https://latex.codecogs.com/svg.latex?\Large&space;N}"/> is a constant used as regularization factor for the polar space span. As the time stamp increases, the polar coordinate mapping represents the change in relative calculated angle resulting in a different perspective of the time series behavior. This is illustrated in the fig. 5. GAF provides two major advantages-: (a) a one-to-one mapping of the time series to the polar coordinates, and (b) preservation of absolute temporal correlations. Once the time series data is mapped into the polar coordinate system, the Gramian matrix can be contstructed. 
 
 *Gramian Angular Summation Field (GASF)* is formed using the trigonometric summation of the angle given by inverse cosine in the rescaled time series signal as follows:
+
 <img src="https://tex.s2cms.ru/svg/GASF%3D%5Cbegin%7Bpmatrix%7D%0Acos(%5Cphi_1%2B%5Cphi_1)%26%5Cdots%20%26cos(%5Cphi_1%2B%5Cphi_n)%5C%5C%0A%5Cdots%20%26%20%5Cdots%20%26%20%5Cdots%5C%5C%0Acos(%5Cphi_n%2B%5Cphi_1)%26%5Cdots%20%26cos(%5Cphi_n%2B%5Cphi_n)%0A%5Cend%7Bpmatrix%7D%2C" alt="GASF=\begin{pmatrix}
 cos(\phi_1+\phi_1)&amp;\dots &amp;cos(\phi_1+\phi_n)\\
 \dots &amp; \dots &amp; \dots\\
