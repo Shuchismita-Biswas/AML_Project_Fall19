@@ -8,6 +8,8 @@ A time-series refers to a sequence of data points, ordered temporally. Time-seri
 
 Recent advances in the field of computer vision have developed efficent DNNs, like **Convolutional Neural Networks (CNN)** for image classification. In recent literature, some papers have proposed image embedding of time series data so as to leverage image classification algorithms for the TSC task. In this project, we reproduce two image embedding methods for time series data- **Recurrence Plots (RP)** [1] and **Gramian Angular Summation Field (GASF)** [2] and use a CNN to classify the generated images. We test the classification algorithm (summarized in fig. 1) using two datasets from the UCR dataset archive [3] and verify the results reported in [1]. Downsampling of the original time-series is done to ease computational burden.
 
+**Reference [1] claims that the RP image embedding method combined with a deep CNN-based classifier outperforms other benchmark TSC methods in literature as well as the GASF imaging method. This project checks whether the TSC accuracy reported by [1] can be reproduced. 
+
 ![pipeline](pipeline.PNG)
 > Fig. 1: Pipeline of the time series classification (TSC) algorithm.
 
@@ -118,7 +120,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
-    <td class="tg-c3ow">Fifty words</td>
+    <td class="tg-c3ow">FiftyWords</td>
     <td class="tg-c3ow"></td>
     <td class="tg-c3ow"></td>
     <td class="tg-c3ow"></td>
