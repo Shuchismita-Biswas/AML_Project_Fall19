@@ -52,4 +52,14 @@ Additionally, CNNs include a Pool layer for downsampling the information and a f
 |             |       RP-CNN      | GASF-CNN |       RP-CNN      | GASF-CNN |
 |   ECG 200   |                   |          |                   |          |
 | Fifty words |                   |          |                   |          |
+
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         ||  
+[Prototype table]
 ## Summary
