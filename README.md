@@ -26,7 +26,7 @@ Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and
 
 ### Gramian Angular Summation Field (GASF)
 In this image embedding technique, the time series is first transformed into the polar coordinates, where the radius represents the time stamps, and cosine of the angle represents the amplitude values in the data rescaled in the interval [-1,1] or [0,1] using the following equation:
-<img src="http://latex.codecogs.com/gif.latex?\tilde x = \frac{(x_i-max(x))+(x_i-min(x))}{max(x)-min(x)}" border="0"/>
+<img src="http://latex.codecogs.com/gif.latex?\tilde x = (x_i-max(x))+(x_i-min(x))/(max(x)-min(x))" border="0"/>
 
 
 ## Convolutional Neural Networks
