@@ -140,7 +140,8 @@ model.fit(x_train, y_train,
 
 The following hyperparameters were used for the CNN classifier on each dataset. 
 
-> Table I: Hyperparameters for the RP-CNN method
+> Table I: Hyperparameters for the RP-CNN method <
+
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------: |
 | ECG200 | | | |
