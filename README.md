@@ -44,7 +44,12 @@ A CNN [3] :
      style="float: left; margin-right: 10px;" />
 
 Additionally, CNNs include a Pool layer for downsampling the information and a fully-connected output layer to produce output values corresponding to each of the  classification classes.
-## Recurrence Plots
-## Gramian Angular Summation/Difference Fields
-## Experiments and Results
+
+## Experiments
+
+|   Dataset   | Accuracy reported |          | Accuracy Obtained |          |
+|:-----------:|:----------------------------:|:----------------------------:|
+|             |       RP-CNN      | GASF-CNN |       RP-CNN      | GASF-CNN |
+|   ECG 200   |                   |          |                   |          |
+| Fifty words |                   |          |                   |          |
 ## Summary
