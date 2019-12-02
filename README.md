@@ -104,7 +104,38 @@ PAA was used to downsample the original time-series so that the computational bu
 
 In this project, a deep CNN classifier following the structure in [1] was trained and evaluated. All experiments were carried out using Keras on Google Colaboratory using the GPU hardware acceleration option. The CNN structure is summarized below.
 
--  **Architecture** : Two-stage CNN 32(5)-2-32(5)-2-128-c.
+-  **Architecture** : Two-stage CNN 32(5)-2-32(5)-2-128-c. This means that there are two convolution layers with filter size 32 and kernel size 5. The convolutional layer is follwed by a 2 X 2 maxPooling layer and a 0.25 Dropout layer. The fully connected layer contains 128 hidden neurons followed by a 0.5 dropout layer. 'c' here, refers to the number of classes. 
+
+- **Loss Function** : Categorical cross-entropy
+
+- **Optimizer** : Adam
+
+<blockquote> model = Sequential()
+model.add(Conv2D(32, kernel_size=(5,5),
+                 activation='relu',
+                 input_shape=input_shape))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Conv2D(32, kernel_size=(5,5), 
+                 activation='relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+model.add(Dropout(0.25))
+model.add(Flatten())
+model.add(Dense(128, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(num_classes, activation='softmax'))
+
+model.compile(loss=keras.losses.categorical_crossentropy,
+              optimizer=keras.optimizers.Adam(),
+              metrics=['accuracy'])
+              
+model.fit(x_train, y_train,
+          batch_size=batch_size,
+          epochs=epochs,
+          verbose=1,
+          validation_data=(x_test, y_test))
+<blockquote>
+
 
 
 <table class="tg">
