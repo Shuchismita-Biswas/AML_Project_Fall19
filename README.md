@@ -27,7 +27,6 @@ Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and
 ### Gramian Angular Field (GAF)
 In this image embedding technique, the time series is first transformed into the polar coordinates, where the radius represents the time stamps, and cosine of the angle represents the amplitude values in the data rescaled in the interval [-1,1] or [0,1] using the following equation:
 <img src="http://latex.codecogs.com/gif.latex? x' = (x_i-x_{max})+(x_i-x_{min})/(x_{max}-x_{min})" border="0"/>.
-
 This produces angular values in the range [0, π], which is later used in calculating information granularity in the GAF. Next, the cosine angle <img src="https://tex.s2cms.ru/svg/%5Cphi" alt="\phi" /> is calculated using the time stamp, <img src="https://latex.codecogs.com/svg.latex?\Large&space;t}"/>, as:
 
 <img src="https://tex.s2cms.ru/svg/%5Cphi%3Dcos%5E%7B-1%7D(x'_i)%2C%20%5Cquad%20-1%5Cleq%20x'_i%20%5Cleq%201%20" alt="\phi=cos^{-1}(x'_i), \quad -1\leq x'_i \leq 1 " />. 
