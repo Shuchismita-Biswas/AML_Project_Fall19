@@ -67,6 +67,9 @@ Fig 4: An example CNN classifier
 ### Dataset 
 In this project, the efficacy of using deep CNNs in classifying time series images is demonstrated on two datasets from the [UCR time series archive](https://www.cs.ucr.edu/~eamonn/time_series_data_2018/): **ECG200** and **FiftyWords**. 
 
+ - *ECG200*: 
+ - *FiftyWords*:
+
 -*ECG200*: In this dataset, each series traces the electrical activity recorded during one heartbeat. The two classes are a normal heartbeat and a Myocardial Infarction.
 -*FiftyWords*: This dataset consists of word outlines taken from the George Washington library. Each case is a word. A series is formed by taking the height profile of the word.
 
