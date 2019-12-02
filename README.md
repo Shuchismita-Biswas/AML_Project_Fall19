@@ -11,7 +11,7 @@ Recent advances in the field of computer vision have developed efficent DNNs, li
 ## Encoding Time-Series into Images
 The idea of imaging time-series entails training machines to *visually* recognize, classify and learn temporal structures and patterns. Here, we describe two methods that this project has explored. 
 
-## Recurrence Plots (RP)
+### Recurrence Plots (RP)
 Time series data are characterized by distinct behavior like periodicity, trends and cyclicities. Dynamic nonlinear systems exhibit recurrence of states which may be visualized through RPs. First introduced in [4], RPs explore the <img src="https://latex.codecogs.com/svg.latex?\Large&space;m}"/>-dimensional phase space trajectory of a system by representing its recurrences in two dimensions. They capture how frequently a system returns to or deviates from its past states. Mathematically, this may be expressed as below.
 
 <img src="https://tex.s2cms.ru/svg/R_%7Bi%2Cj%7D%3D%7C%7C%5CVec%7Bs_i%7D-%5CVec%7Bs_j%7D%7C%7C%2C%20%5Cquad%20i%2Cj%3D1%2C2%2C%5Cdots%20K." alt="R_{i,j}=||\Vec{s_i}-\Vec{s_j}||, \quad i,j=1,2,\dots K." />
@@ -21,7 +21,7 @@ Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and
 ![RP](RP.PNG)
 > Fig. 1: Procedure for constructing unthresholded RP images from time-series data, reproduced from [1]. On the left panel, we show a simple univariate time series <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/> with 12 samples. The middle panel shows its two dimensional phase space trajectory with <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i:(f(i),f(i+1))}"/>. The right panel shows the unthresholded RP for <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/>. It is a <img src="https://latex.codecogs.com/svg.latex?\Large&space;11\times11}"/> matrix, whose <img src="https://latex.codecogs.com/svg.latex?\Large&space;(i,j)}"/>-th entry is the euclidean distance between <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_j}"/> in the phase space.
 
-## Gramian Angular Summation Field (GASF)
+### Gramian Angular Summation Field (GASF)
 
 
 
