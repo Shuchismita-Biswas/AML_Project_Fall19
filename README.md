@@ -47,18 +47,6 @@ Additionally, CNNs include a Pool layer for downsampling the information and a f
 
 ## Experiments
 
-|   Dataset   | Accuracy reported |          | Accuracy Obtained |          |
-|:-----------:|:-----------------:|:--------:|:-----------------:|:--------:|
-|             |       RP-CNN      | GASF-CNN |       RP-CNN      | GASF-CNN |
-|   ECG 200   |                   |          |                   |          |
-| Fifty words |                   |          |                   |          |
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
 <table class="tg">
   <tr>
     <th class="tg-c3ow">Dataset</th>
@@ -86,33 +74,5 @@ Additionally, CNNs include a Pool layer for downsampling the information and a f
     <td class="tg-c3ow"></td>
     <td class="tg-c3ow"></td>
   </tr>
-</table><table class="tg">
-  <tr>
-    <th class="tg-7btt" rowspan="2"><br>Dataset</th>
-    <th class="tg-7btt" colspan="2">Accuracy reported</th>
-    <th class="tg-7btt" colspan="2">Accuracy Obtained</th>
-  </tr>
-  <tr>
-    <td class="tg-7btt">RP-CNN</td>
-    <td class="tg-7btt">GASF-CNN</td>
-    <td class="tg-7btt">RP-CNN</td>
-    <td class="tg-7btt">GASF-CNN</td>
-  </tr>
-  <tr>
-    <td class="tg-7btt">ECG 200</td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-  </tr>
-  <tr>
-    <td class="tg-7btt">Fifty words</td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-  </tr>
 </table>
-
-## Summary
 ## Summary
