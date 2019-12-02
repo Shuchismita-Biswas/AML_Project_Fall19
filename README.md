@@ -18,9 +18,8 @@ Time series data are characterized by distinct behavior like periodicity, trends
 
 Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_j%7D" alt="\Vec{s_j}" /> represent the system states at time instants <img src="https://latex.codecogs.com/svg.latex?\Large&space;i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;j}"/> respectively. <img src="https://latex.codecogs.com/svg.latex?\Large&space;K}"/> is the number of system states considered. In the original RP method, the <img src="https://latex.codecogs.com/svg.latex?\Large&space;R}"/> matrix is binary, i.e. its entries are <img src="https://latex.codecogs.com/svg.latex?\Large&space;1}"/> if the value of <img src="https://tex.s2cms.ru/svg/%7C%7C%5CVec%7Bs_i%7D-%5CVec%7Bs_j%7D%7C%7C" alt="||\Vec{s_i}-\Vec{s_j}||" /> is above a pre-determined threshold and <img src="https://latex.codecogs.com/svg.latex?\Large&space;0}"/> otherwise. We do away with the thresholding since unthresholded RPs capture more information. Images so obtained capture patterns which may not be immediately discernible to the naked eye. A detailed procedure for constructing a RP plot of a simple time series is shown in Fig. 1.
 
-<img src=" https://github.com/Shuchismita-Biswas/AML_Project_Fall19/blob/master/RP.PNG" width="50%"
-     alt="RP"
-     title="Recurrence Plot" />
+![RP](RP.PNG)
+
 
 
 ## Convolutional Neural Networks
