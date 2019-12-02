@@ -108,7 +108,7 @@ In this project, a deep CNN classifier following the structure in [1] was traine
 - **Loss Function** : Categorical cross-entropy
 - **Optimizer** : Adam
 
-'''
+~~~
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(5,5),
                  activation='relu',
@@ -133,7 +133,7 @@ model.fit(x_train, y_train,
           epochs=epochs,
           verbose=1,
           validation_data=(x_test, y_test))
-'''
+~~~
 
 
 
