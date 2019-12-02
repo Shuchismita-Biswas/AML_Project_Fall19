@@ -75,4 +75,5 @@ Additionally, CNNs include a Pool layer for downsampling the information and a f
     <td class="tg-c3ow"></td>
   </tr>
 </table>
+
 ## Summary
