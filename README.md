@@ -110,7 +110,7 @@ PAA was used to downsample the original time-series so that the computational bu
 
 In this project, a deep CNN classifier following the structure in [1] was trained and evaluated. All experiments were carried out using [Keras](https://keras.io/examples/mnist_cnn/) on Google Colaboratory using the GPU hardware acceleration option. The CNN structure is summarized below. 
 
--  **Architecture** : Two-stage CNN 32(5)-2-32(5)-2-128-c. This means that there are two convolution layers with filter size 32 and kernel size 5. The convolutional layer is follwed by a 2 X 2 maxPooling layer and a 0.25 Dropout layer. The fully connected layer contains 128 hidden neurons followed by a 0.5 dropout layer. 'c' here, refers to the number of classes. 
+-  **Architecture** : Two-stage CNN 32(5)-2-32(5)-2-128-c. This means that there are two convolution layers with filter size 32 and kernel size 5 X 5. The convolutional layer is follwed by a 2 X 2 maxPooling layer and a 0.25 Dropout layer. The fully connected layer contains 128 hidden neurons followed by a 0.5 dropout layer. 'c' here, refers to the number of classes. 
 - **Activation** : ReLU
 - **Loss Function** : Categorical cross-entropy
 - **Optimizer** : Adam
