@@ -97,7 +97,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
 </table>
 
 <p align="center">
-<img src="RP_ECG200.png" alt="rpecg" width="600" align="middle"/><br />
+<img src="RP_ECG200.png" alt="rpecg" width="700" align="middle"/><br />
  </p>
  
 > FIg. 6: Illustrating the ECG200 dataset
@@ -163,6 +163,8 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 ### Performance Accuracy
 
+This project was able to closely reproduce the results in table 1 of reference [1], pertaining to the performance of image-embedding aided deep CNN based classifiers for the TSC task. Hyperparameters used for specific datasets have not been explicitly mentioned in the paper. Hence, we 
+
 <table class="tg">
   <tr>
     <th class="tg-c3ow">Dataset</th>
@@ -185,10 +187,10 @@ The following hyperparameters were used for the CNN classifier on each dataset.
   </tr>
   <tr>
     <td class="tg-c3ow">FiftyWords</td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow">0.74</td>
+    <td class="tg-c3ow">0.7</td>
+    <td class="tg-c3ow">0.72</td>
+    <td class="tg-c3ow">0.7</td>
   </tr>
 </table>
 
