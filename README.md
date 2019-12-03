@@ -151,7 +151,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------: |
 | ECG200 | | | |
-| FiftyWords | 64 X 64 | 90 | 1500 |
+| FiftyWords | 32 X 32 | 10 | 1500 |
 
 > Table II: Hyperparameters for the GASF-CNN method  
 
@@ -189,7 +189,7 @@ This project was able to closely reproduce the results in table 1 of reference [
     <td class="tg-c3ow">FiftyWords</td>
     <td class="tg-c3ow">0.74</td>
     <td class="tg-c3ow">0.7</td>
-    <td class="tg-c3ow">0.72</td>
+    <td class="tg-c3ow">0.73</td>
     <td class="tg-c3ow">0.7</td>
   </tr>
 </table>
