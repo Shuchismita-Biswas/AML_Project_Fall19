@@ -163,7 +163,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 ### Performance Accuracy
 
-This project was able to closely reproduce the results in table 1 of reference [1], pertaining to the performance of image-embedding aided deep CNN based classifiers for the TSC task. Hyperparameters used for specific datasets have not been explicitly mentioned in the paper. Hence, we 
+This project was able to closely reproduce the results in table 1 of reference [1], pertaining to the performance of image-embedding aided deep CNN based classifiers for the TSC task. Hyperparameters used for specific datasets have not been explicitly mentioned in the paper. Hence, we used a trial and error approach to arrive at the hyperparameters mentioned in the previous section.
 
 <table class="tg">
   <tr>
@@ -195,6 +195,11 @@ This project was able to closely reproduce the results in table 1 of reference [
 </table>
 
 ## Summary
+
+- **Results from the original paper:** In [1], the authors propose that the superior performance of CNNs in image classification maybe laveraged for time series classification as well. They first convert a time series into images using the unthresholded recurrence plot method [4] and then train a CNN to learn patterns and structures in these images. The paper illustrates through experiments on datasets from the UCR archive [3] that the RP-CNN method outperforms other conventional TSC methods as well as image embedding methods [2] proposed in literature.
+- **Procedure followed to reproduce results:** We reproduced the RP-aided TSC from [1] and compared it to the GASF embedding method proposed in [2]. The results obtained were compared to the ones reported in table 1 in the original paper [1]. Time series data is first downsampled using piecewise aggregate approximation, embedded into images and then classified using a CNN. Our results show that we are closely (although not exactly) able to reproduce what has been presented in [1]. All experiments were performed on Google Collaboratory using Keras and the GPU hardware acceleration option. The hyperparameters and CNN architecture used are elaborated in this report, and codes are available at this repository. The CNN classifier has been trained following this [Keras example](https://keras.io/examples/mnist_cnn/).
+- **
+
 
 ## References
 [1]  N. Hatami, Y. Gavet, and J. Debayle, “Classification of Time-Series
