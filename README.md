@@ -96,6 +96,9 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
   </tr>
 </table>
 
+![RP_ECG](RP_ECG200.PNG)
+> FIg. 6: Illustrating the ECG200 dataset
+
 ### Piecewise Approximate Aggregation (PAA)
 
 PAA was used to downsample the original time-series so that the computational burden on CNN classifier could be reduced. It simply means representing a *piece* of the time-series by its arithmetic mean. In [1], the authors mention that they choose from 28 X 28, 56 X 56 and 64 X 64 pixel inputs to represent time-series data as per their lengths. We used PAA to obtain these image sizes. Our experimental hyperparameters are detailed in a later section.
