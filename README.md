@@ -96,7 +96,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
   </tr>
 </table>
 
-![RP_ECG](RP_ECG200.PNG)
+![RP_ECG](RP_ECG200.png)
 > FIg. 6: Illustrating the ECG200 dataset
 
 ### Piecewise Approximate Aggregation (PAA)
