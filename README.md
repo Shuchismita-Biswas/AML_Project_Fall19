@@ -180,9 +180,9 @@ This project was able to closely reproduce the results in table 1 of reference [
   </tr>
   <tr>
     <td class="tg-c3ow">ECG 200</td>
+    <td class="tg-c3ow">1.0</td>
     <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
-    <td class="tg-c3ow"></td>
+    <td class="tg-c3ow">0.94</td>
     <td class="tg-c3ow"></td>
   </tr>
   <tr>
