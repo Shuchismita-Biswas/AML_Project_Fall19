@@ -81,7 +81,7 @@ def GADF(data):
  ~~~
 
 ![GAF](GAF.PNG)
->Fig. 3: Construction of GAF images using the procedure in [2]. The first panel shows the original time series, the second panel shows its tranjectory the polar coordinates. Trajectory radius decreases with time, thereby preserving the temporal relationship present in the original data. The third and fourth panels show the corresponding summation and difference field images respectively.
+>Fig. 3: Construction of GAF images using the procedure in [2]. The left panel shows the original time series, the central panel shows its tranjectory the polar coordinates. Trajectory radius decreases with time, thereby preserving the temporal relationship present in the original data. The right panel shows the corresponding difference field image.
 
 ## Convolutional Neural Networks
 CNNs like regular DNNs consist of a input layer, hidden layers and an output layer, but at least one of the hidden layers must be *convolutional*. Training a CNN also has a similar purpose as a regular DNN - to minimize the loss function measured at the output layer. The main difference between the CNNs and DNNs lies in how this information flows through a CNN. [6]
