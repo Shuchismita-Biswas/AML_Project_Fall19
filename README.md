@@ -95,7 +95,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
 </table>
 
 <p align="center">
-<img src="image_ecg.png" alt="rpecg" width="700" align="middle"/><br />
+<img src="toy_ecg.png" alt="rpecg" width="700" align="middle"/><br />
  </p>
  
 > FIg. 6: Illustrating the ECG200 dataset
