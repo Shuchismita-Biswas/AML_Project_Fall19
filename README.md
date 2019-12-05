@@ -152,7 +152,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------: |
-| ECG200 | | | |
+| ECG200 | 31 x 31|10|500|
 | FiftyWords | 32 X 32 | 10 | 1500 |
 
 > Table II: Hyperparameters for the GADF-CNN method  
