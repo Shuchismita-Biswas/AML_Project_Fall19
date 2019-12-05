@@ -94,7 +94,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
   </tr>
 </table>
 
-<p align="center">
+<p align="left">
 <img src="toy_ecg.png" alt="rpecg" width="700" align="middle"/><br />
  </p>
  
@@ -149,7 +149,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------: |
 | ECG200 | 32 x 32|10|150|
-| FiftyWords | 32 X 32 | 10 | 1500 |
+| FiftyWords | 30 X 30 | 10 | 500 |
 
 > Table II: Hyperparameters for the GADF-CNN method  
 
@@ -157,7 +157,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------:|
 | ECG200 |32 X 32|10 |500|
-| FiftyWords | 32 X 32 | 10|1400|
+| FiftyWords | 30 X 30 | 10|500|
 
 ### Performance Accuracy
 
@@ -216,4 +216,7 @@ pp. 237–329, Jan 2007.
 
 [5] S. Biswas, R.  Meyur and V. Centeno, "DeVLearn: A Deep Visual Learning Framework for
 Localizing Temporary Faults in Power Systems", *ArXiv*, vol. abs/1911.03759v1, 2019.
+
+[6]  I. Goodfellow,  Y. Bengio,  and A. Courville, Deep  Learning.MIT Press,  2016,  [http://www.deeplearningbook.org](http://www.deeplearningbook.org).
+
 
