@@ -115,7 +115,7 @@ In this project, a deep CNN classifier following the structure in [1] was traine
 - **Loss Function** : Categorical cross-entropy
 - **Optimizer** : Adam
 
-~~~json
+~~~
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(5,5),
                  activation='relu',
@@ -150,7 +150,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------: |
-| ECG200 | 31 x 31|10|500|
+| ECG200 | 32 x 32|10|150|
 | FiftyWords | 32 X 32 | 10 | 1500 |
 
 > Table II: Hyperparameters for the GADF-CNN method  
@@ -158,7 +158,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------:|
-| ECG200 |31 X 31|10 |4500|
+| ECG200 |32 X 32|10 |500|
 | FiftyWords | 32 X 32 | 10|1400|
 
 ### Performance Accuracy
@@ -182,8 +182,8 @@ This project was able to closely reproduce the results in table 1 of reference [
     <td class="tg-c3ow">ECG 200</td>
     <td class="tg-c3ow">1.0</td>
     <td class="tg-c3ow">0.91</td>
-    <td class="tg-c3ow">0.95</td>
-    <td class="tg-c3ow">0.89</td>
+    <td class="tg-c3ow">0.94</td>
+    <td class="tg-c3ow">0.88</td>
   </tr>
   <tr>
     <td class="tg-c3ow">FiftyWords</td>
