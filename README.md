@@ -47,7 +47,7 @@ Using the trigonometric difference of the angles instead of summation would resu
 >Fig. 3: Construction of GAF images using the procedure in [2]. The first panel shows the original time series, the second panel shows its tranjectory the polar coordinates. Trajectory radius decreases with time, thereby preserving the temporal relationship present in the original data. The third and fourth panels show the corresponding summation and difference field images respectively.
 
 ## Convolutional Neural Networks
-CNNs like regular DNNs consist of a input layer, hidden layers and an output layer. Training a CNN also has a similar purpose as a regular DNN - to minimize the loss function measured at the output layer. The main difference between the CNNs and DNNs lies in how this information flows through a CNN.
+CNNs like regular DNNs consist of a input layer, hidden layers and an output layer, but at least one of the hidden layers must be *convolutional*. Training a CNN also has a similar purpose as a regular DNN - to minimize the loss function measured at the output layer. The main difference between the CNNs and DNNs lies in how this information flows through a CNN. [6]
 
 <p align="center">
 <img src="neural_net2.jpeg" alt="dnn" width="500" align="middle"/>
@@ -55,7 +55,9 @@ CNNs like regular DNNs consist of a input layer, hidden layers and an output lay
 Fig 3: A fully connected DNN with two hidden layers 
 </p>
 
-Unlike a regular DNN which use matrix dot products, the information between layers in a CNN can be a result of the convolution operation. This is specifically useful for images for which a convolution can be seen as a rolling matrix dot products over smaller portions of the image. Additionally, multiple such moving matrices can be stacked together to add a dimension of depth in addition to width and height. Additionally, CNNs include a Pool layer for downsampling the information and a fully-connected output layer to produce output values corresponding to each of the  classification classes.
+Unlike a regular DNN which use matrix dot products, the information between layers in a CNN can be a result of the convolution operation. This is specifically useful for images for which a convolution can be seen as a rolling matrix dot products over smaller portions of the image. Additionally, multiple such moving matrices can be stacked together to add a dimension of depth in addition to width and height.
+
+The working principle of CNNs is biologically inspired by the organization of the visual cortex of mammals. In a mammal’s eye, individual neurons respond to visual stimuli only in the receptive field, which is a restricted region. The receptive fields of different regions partially overlap in a manner that covers the entire field of vision. Similarly, in a convolutional layer of the CNN, neurons only receive input from a subarea of the previous layer, but the subareas from which different neurons receive information are overlapping. Pooling layers combine the outputs of clusters of neurons into a single neuron in the next layer. In a fully connected layer (similar to a multi-layer perceptron), each neuron receives input from every element of the previous layer.
 
 <p align="center">
 <img src="CNN.PNG" alt="cnn"  align="middle"/><br />
