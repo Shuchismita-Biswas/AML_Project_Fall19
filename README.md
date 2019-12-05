@@ -144,14 +144,17 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
 PAA was used to downsample the original time-series so that the computational burden on CNN classifier could be reduced. It simply means representing a *piece* of the time-series by its arithmetic mean. In [1], the authors mention that they choose from 28 X 28, 56 X 56 and 64 X 64 pixel inputs to represent time-series data as per their lengths. We used PAA to obtain these image sizes. Our experimental hyperparameters are detailed in a later section.
 
 ~~~
-def rescale(data):
-    #input datatype data: ndarray , dxn, d-number of series, n-number of samples in each series
-    #output datatype rescaled: ndarray, dxn
+def paa(data,ds_factor=2):
+    #input datatype data : ndarray, dxn, d-number of series, n-number of samples in each series
+    #input datatype ds_factor : int, downsampling factor, default is 2
+    #output datatype ds_series : ndarray, downsampled time series
     
-    num=data-np.tile(np.mat(data.min(axis=1)).T,(1,np.shape(data)[1]))
-    denom=np.tile(np.mat(data.max(axis=1)).T,(1,np.shape(data)[1]))-np.tile(np.mat(data.min(axis=1)).T,(1,np.shape(data)[1]))
-    rescaled=np.multiply(num,1/denom)
-    return rescaled
+    d,ds_b = data.shape
+    ds_length = int(ds_b/ds_factor)
+    ds_series = np.empty(shape = (d,ds_length))
+    for i in range (ds_length):
+        ds_series[:,i] = np.mean(data[:,i*ds_factor:(i+1)*ds_factor],axis=1)
+    return ds_series
 ~~~
 
 ### CNN Structure
