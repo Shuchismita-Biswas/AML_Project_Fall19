@@ -6,9 +6,9 @@ Shuchismita Biswas, Sarthak Gupta, Sanij Gyawali, Sagar Karki
 # Classification of Time-Series Images Using Deep Convolutional Neural Networks
 A time-series refers to a sequence of data points, ordered temporally. Time-series analysis finds many real-world applications, in fields like weather forecasting, stock markets, biomedical signal monitoring, video processing and industrial instrumentation. This has motivated efforts and research into **time-series classification (TSC)** tasks that assign a label <img src="https://latex.codecogs.com/svg.latex?\Large&space;y_n}"/> to a time-series <img src="https://latex.codecogs.com/svg.latex?\Large&space;x_n}"/>. Traditional TSC methods may be categorized into two broad classes- frequency-domain (spectral analysis, wavelet analysis etc) and time-domain (auto-correlation, auto-regression, cross-correlation etc) methods. More recently deep neural networks (DNN) have been applied to TSC tasks successfully. 
 
-Recent advances in the field of computer vision have developed efficent DNNs, like **Convolutional Neural Networks (CNN)** for image classification. However, in feedforward neural networks, every observation is treated as independent and identically distributed (iid). Therefore these neural nets may no be directly applied to time series analysis as they fail to preserve the  temporal relationshipp present in sequential observations. In recent literature, some papers have proposed image embedding of time series data so as to leverage image classification algorithms for the TSC task. In this project, we reproduce two image embedding methods for time series data- **Recurrence Plots (RP)** [1] and **Gramian Angular Summation Field (GASF)** [2] and use a CNN to classify the generated images. We test the classification algorithm (summarized in fig. 1) using two datasets from the UCR dataset archive [3] and verify the results reported in [1]. Downsampling of the original time-series is done to ease computational burden.
+Recent advances in the field of computer vision have developed efficent DNNs, like **Convolutional Neural Networks (CNN)** for image classification. However, in feedforward neural networks, every observation is treated as independent and identically distributed (iid). Therefore these neural nets may no be directly applied to time series analysis as they fail to preserve the  temporal relationshipp present in sequential observations. In recent literature, some papers have proposed image embedding of time series data so as to leverage image classification algorithms for the TSC task. In this project, we reproduce two image embedding methods for time series data- **Recurrence Plots (RP)** [1] and **Gramian Angular Field (GAF)** [2] and use a CNN to classify the generated images. We test the classification algorithm (summarized in fig. 1) using two datasets from the UCR dataset archive [3] and verify the results reported in [1]. Downsampling of the original time-series is done to ease computational burden.
 
-**Reference [1] claims that the RP image embedding method combined with a deep CNN-based classifier outperforms other benchmark TSC methods in literature as well as the GASF imaging method. This project checks whether the TSC accuracy reported by [1] can be reproduced.** 
+**Reference [1] claims that the RP image embedding method combined with a deep CNN-based classifier outperforms other benchmark TSC methods in literature as well as the GAF imaging method. This project checks whether the TSC accuracy reported by [1] can be reproduced.** 
 
 ![pipeline](pipeline.PNG)
 > Fig. 1: Pipeline of the time series classification (TSC) algorithm.
@@ -98,6 +98,7 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
 
 <p align="center">
 <img src="RP_ECG200.png" alt="rpecg" width="700" align="middle"/><br />
+ <p align="right">
 <img src="plus and minus gadf.png" alt="rpecg" width="500" align="middle"/><br />
  </p>
  
@@ -154,13 +155,13 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 | ECG200 | | | |
 | FiftyWords | 32 X 32 | 10 | 1500 |
 
-> Table II: Hyperparameters for the GASF-CNN method  
+> Table II: Hyperparameters for the GADF-CNN method  
 
 
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------:|
-| ECG200 | | | |
-| FiftyWords | |  |  |
+| ECG200 |31 X 31| |4500|
+| FiftyWords | 32 X 32 | 10|1400|
 
 ### Performance Accuracy
 
@@ -175,16 +176,16 @@ This project was able to closely reproduce the results in table 1 of reference [
   <tr>
     <td class="tg-c3ow"></td>
     <td class="tg-c3ow">RP-CNN</td>
-    <td class="tg-c3ow">GASF-CNN</td>
+    <td class="tg-c3ow">GADF-CNN</td>
     <td class="tg-c3ow">RP-CNN</td>
-    <td class="tg-c3ow">GASF-CNN</td>
+    <td class="tg-c3ow">GADF-CNN</td>
   </tr>
   <tr>
     <td class="tg-c3ow">ECG 200</td>
     <td class="tg-c3ow">1.0</td>
     <td class="tg-c3ow">0.91</td>
-    <td class="tg-c3ow">0.94</td>
-    <td class="tg-c3ow">0.91</td>
+    <td class="tg-c3ow">0.95</td>
+    <td class="tg-c3ow">0.89</td>
   </tr>
   <tr>
     <td class="tg-c3ow">FiftyWords</td>
@@ -198,9 +199,9 @@ This project was able to closely reproduce the results in table 1 of reference [
 ## Summary
 
 - **Results from the original paper:** In [1], the authors propose that the superior performance of CNNs in image classification maybe laveraged for time series classification as well. They first convert a time series into images using the unthresholded recurrence plot method [4] and then train a CNN to learn patterns and structures in these images. The paper illustrates through experiments on datasets from the UCR archive [3] that the RP-CNN method outperforms other conventional TSC methods as well as image embedding methods [2] proposed in literature.
-- **Procedure followed to reproduce results:** We reproduced the RP-aided TSC from [1] and compared it to the GASF embedding method proposed in [2]. The results obtained were compared to the ones reported in table 1 in the original paper [1]. Time series data is first downsampled using piecewise aggregate approximation, embedded into images and then classified using a CNN. Our results show that we are closely (although not exactly) able to reproduce what has been presented in [1]. All experiments were performed on Google Collaboratory using Keras and the GPU hardware acceleration option. The hyperparameters and CNN architecture used are elaborated in this report, and codes are available at this repository. The CNN classifier has been trained following this [Keras example](https://keras.io/examples/mnist_cnn/).
+- **Procedure followed to reproduce results:** We reproduced the RP-aided TSC from [1] and compared it to the GADF embedding method proposed in [2]. The results obtained were compared to the ones reported in table 1 in the original paper [1]. Time series data is first downsampled using piecewise aggregate approximation, embedded into images and then classified using a CNN. Our results show that we are closely (although not exactly) able to reproduce what has been presented in [1]. All experiments were performed on Google Collaboratory using Keras and the GPU hardware acceleration option. The hyperparameters and CNN architecture used are elaborated in this report, and codes are available at this repository. The CNN classifier has been trained following this [Keras example](https://keras.io/examples/mnist_cnn/).
 - **Analysis and Discussion:** In feedforward neural networks, every data point is treated independently, therefore with conventional DNNs, the temporal relationship in time-series cannot be preserved. Recurrent Neural Networks (RNNs) and Long Short Term Memory networks (LSTMs) have been used to overcome these limitations, but face their own drawbacks, like vanishing gradient problems and huge resource requirement for fast training. CNNs, in recent years, have been very successful in image and pattern recognition related tasks and are able to detect the presence of objects of different sizes and orientations in varying positions in an image. This motivates exploring encoding time series as images so that temporal relationships can be embedded as spatial relationship that is present in images. [1] proposes doing this via RPs which provides a means of visually encoding periodic trends characteristic of stochastic processes or dynamic non-linear systems from which most time-series observations are generated. Once the time-series data has been converted to equivalent images, these images can be analyzed using existing deep learning techniques developed for computer vision related tasks. 
-- **Corroboration:** The experiments performed in this project corroborate the findings of [1], specifically the error rates/accuracy reported w.r.t. the ECG200 and FiftyWord datasets. In both cases, we were able to obtain accuracy very close to what has been reported. Moreover, in both cases the RP-CNN method outperformed the GASF-CNN method. 
+- **Corroboration:** The experiments performed in this project corroborate the findings of [1], specifically the error rates/accuracy reported w.r.t. the ECG200 and FiftyWord datasets. In both cases, we were able to obtain accuracy very close to what has been reported. Moreover, in both cases the RP-CNN method outperformed the GADF-CNN method. 
 
 ## References
 [1]  N. Hatami, Y. Gavet, and J. Debayle, “Classification of Time-Series
