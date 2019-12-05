@@ -160,7 +160,7 @@ The following hyperparameters were used for the CNN classifier on each dataset.
 
 | **Dataset** | **Image size** | **Batch size** | **Epochs** |
 | :-------: | :-------: | :-------: | :-------:|
-| ECG200 |31 X 31| |4500|
+| ECG200 |31 X 31|10 |4500|
 | FiftyWords | 32 X 32 | 10|1400|
 
 ### Performance Accuracy
