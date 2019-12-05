@@ -26,6 +26,23 @@ Here, <img src="https://tex.s2cms.ru/svg/%5CVec%7Bs_i%7D" alt="\Vec{s_i}" /> and
 ![RP](RP.PNG)
 > Fig. 2: Procedure for constructing unthresholded RP images from time-series data, reproduced from [1,5]. On the left panel, we show a simple univariate time series <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/> with 12 samples. The middle panel shows its two dimensional phase space trajectory with <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i:(f(i),f(i+1))}"/>. The right panel shows the unthresholded RP for <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(t)}"/>. It is a <img src="https://latex.codecogs.com/svg.latex?\Large&space;11\times11}"/> matrix, whose <img src="https://latex.codecogs.com/svg.latex?\Large&space;(i,j)}"/>-th entry is the euclidean distance between <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_i}"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_j}"/> in the phase space.
 
+~~~
+def r_plot(data,delay=0):
+    #input datatype data : ndarray, 1xn, n-number of samples in each series
+    #input datatype delay : int, delay embedding for RP formation, default value is 1
+    #output datatype rp : ndarray, nxn, unthresholded recurrence plot for series
+    
+    transformed = np.zeros([2,len(data)-delay])
+    transformed[0,:] = data[0:len(data)-delay]
+    transformed[1,:] = data[delay:len(data)]
+    rp = np.zeros([len(data)-delay,len(data)-delay])
+    for i in range(len(rp)):
+        temp = np.tile(transformed[:,i],(len(rp),1)).T-transformed
+        temp2 = np.square(temp)
+        rp[i,:] = np.sum(temp2,axis=0)
+    return np.array(rp)
+~~~
+
 ### Gramian Angular Field (GAF)
 In this image embedding technique, the time series is first transformed into the polar coordinates, where the radius represents the time stamps, and cosine of the angle represents the amplitude values in the data rescaled in the interval [-1,1] or [0,1]. Here we have used the range [0,1], and the arccos values in this range correspond to angular values in the range [0, π/2], which is later used in calculating information granularity in the GAF. Next, the cosine angle <img src="https://tex.s2cms.ru/svg/%5Cphi" alt="\phi" /> is calculated using the time stamp, <img src="https://latex.codecogs.com/svg.latex?\Large&space;t}"/>, as:
 
@@ -42,6 +59,26 @@ cos(\phi_n+\phi_1)&amp;\dots &amp;cos(\phi_n+\phi_n)
 \end{pmatrix}," />
 
 Using the trigonometric difference of the angles instead of summation would result in the formation of the *Gramian Angular Difference Field (GADF)*.
+
+~~~
+def polar_rep (data):
+    #input datatype data : ndarray, 1xn, n-number of samples in each series
+    #output datatype phi : ndarray, 1xn 
+    #output datatype r : ndarray, 1xn
+    
+    phi=np.arccos(data)
+    r=(np.arange(0,np.shape(data)[1])/np.shape(data)[1])+0.1
+    return phi,r
+    
+def GADF(data):
+    #input datatype data : ndarray, 1xn, n-number of samples in each series
+    #output datatype gadf : ndarray, nxn, GADF for series
+    
+    datacos = np.array(data)
+    datasin = np.sqrt(1-datacos**2)
+    gadf = datasin.T*datacos-datacos.T*datasin
+    return gadf
+ ~~~
 
 ![GAF](GAF.PNG)
 >Fig. 3: Construction of GAF images using the procedure in [2]. The first panel shows the original time series, the second panel shows its tranjectory the polar coordinates. Trajectory radius decreases with time, thereby preserving the temporal relationship present in the original data. The third and fourth panels show the corresponding summation and difference field images respectively.
@@ -105,6 +142,17 @@ In this project, the efficacy of using deep CNNs in classifying time series imag
 ### Piecewise Approximate Aggregation (PAA)
 
 PAA was used to downsample the original time-series so that the computational burden on CNN classifier could be reduced. It simply means representing a *piece* of the time-series by its arithmetic mean. In [1], the authors mention that they choose from 28 X 28, 56 X 56 and 64 X 64 pixel inputs to represent time-series data as per their lengths. We used PAA to obtain these image sizes. Our experimental hyperparameters are detailed in a later section.
+
+~~~
+def rescale(data):
+    #input datatype data: ndarray , dxn, d-number of series, n-number of samples in each series
+    #output datatype rescaled: ndarray, dxn
+    
+    num=data-np.tile(np.mat(data.min(axis=1)).T,(1,np.shape(data)[1]))
+    denom=np.tile(np.mat(data.max(axis=1)).T,(1,np.shape(data)[1]))-np.tile(np.mat(data.min(axis=1)).T,(1,np.shape(data)[1]))
+    rescaled=np.multiply(num,1/denom)
+    return rescaled
+~~~
 
 ### CNN Structure
 
